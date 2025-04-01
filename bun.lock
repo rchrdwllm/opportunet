@@ -4,6 +4,8 @@
     "": {
       "name": "opportunet",
       "dependencies": {
+        "@expo-google-fonts/geist": "^0.3.0",
+        "@expo-google-fonts/geist-mono": "^0.3.0",
         "@expo/vector-icons": "^14.0.2",
         "@react-navigation/bottom-tabs": "^7.2.0",
         "@react-navigation/native": "^7.0.14",
@@ -306,6 +308,10 @@
     "@bcoe/v8-coverage": ["@bcoe/v8-coverage@0.2.3", "", {}, "sha512-0hYQ8SB4Db5zvZB4axdMHGwEaQjkZzFjQiN9LVYvIFB2nSUHW9tYpxWriPrWDASIxiaXax83REcLxuSdnGPZtw=="],
 
     "@egjs/hammerjs": ["@egjs/hammerjs@2.0.17", "", { "dependencies": { "@types/hammerjs": "^2.0.36" } }, "sha512-XQsZgjm2EcVUiZQf11UBJQfmZeEmOW8DpI1gsFeln6w0ae0ii4dMQEQ0kjl6DspdWX1aGY1/loyXnP0JS06e/A=="],
+
+    "@expo-google-fonts/geist": ["@expo-google-fonts/geist@0.3.0", "", {}, "sha512-dfBOjhPPDiweGRz1vBo9fwclTjkUbyTHKI+8JguX9tZraTH/mg6jLIFw/6xQjKTAF2TVX2iNG4weNg7O1N+6vQ=="],
+
+    "@expo-google-fonts/geist-mono": ["@expo-google-fonts/geist-mono@0.3.0", "", {}, "sha512-4RxL8HRPQt2Or5gFxcNY0wqHKTNvlSSLlN6ax7wWtFwjtuVa+5uhOy22nJ+nmX1e90b0cbd3YO1cxtbxw+YtyQ=="],
 
     "@expo/bunyan": ["@expo/bunyan@4.0.1", "", { "dependencies": { "uuid": "^8.0.0" } }, "sha512-+Lla7nYSiHZirgK+U/uYzsLv/X+HaJienbD5AKX1UQZHYfWaP+9uuQluRB4GrEVWF0GZ7vEVp/jzaOT9k/SQlg=="],
 
