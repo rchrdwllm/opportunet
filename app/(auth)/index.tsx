@@ -1,10 +1,11 @@
-import { Text, View, StyleSheet, Pressable } from "react-native";
+import { View, StyleSheet, Pressable } from "react-native";
 import { Image } from "expo-image";
 import logo from '../../assets/images/logo.png';
 import Input from "@/components/input";
 import { useState } from "react";
 import Button from "@/components/button";
 import { Link } from "expo-router";
+import Text from "@/components/text";
 
 export default function HomeScreen() {
   const [email, setEmail] = useState("");
@@ -18,7 +19,9 @@ export default function HomeScreen() {
         <Input value={password} onChangeText={setPassword} placeholder="Password" secureTextEntry />
       </View>
       <View style={styles.buttonContainer}>
-        <Button>Login</Button>
+        <Link href="/(app)" asChild>
+          <Button>Login</Button>
+        </Link>
         <Link href="/register" asChild>
           <Pressable style={styles.registerBtn}>
             <Text style={styles.newUserText}>New user? <Text style={styles.registerText}>Register</Text></Text>
