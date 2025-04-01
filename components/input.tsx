@@ -24,7 +24,7 @@ const Input = ({
         onChangeText={onChangeText}
         secureTextEntry={secureTextEntry}
         placeholder={placeholder}
-        style={[inputStyle]}
+        style={[style.textInput, inputStyle]}
         placeholderTextColor="#A4A7AE"
       />
     </View>
@@ -40,6 +40,10 @@ const style = StyleSheet.create({
     backgroundColor: "#F9F9F9",
     borderWidth: 1,
     borderColor: "#181D2710"
+  },
+  textInput: {
+    fontFamily: "Geist_400Regular",
+    color: "#181D27"
   }
 })
 

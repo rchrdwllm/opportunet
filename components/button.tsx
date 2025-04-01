@@ -1,5 +1,6 @@
 import { ReactNode } from 'react';
-import { Text, StyleSheet, Pressable } from 'react-native'
+import { StyleSheet, Pressable } from 'react-native'
+import Text from './text';
 
 type ButtonProps = {
   onPress?: () => void;
@@ -11,7 +12,7 @@ type ButtonProps = {
 const Button = ({ onPress, children, containerStyle, textStyle }: ButtonProps) => {
   return (
     <Pressable style={[styles.container, containerStyle]} onPress={onPress}>
-      <Text style={[styles.text, textStyle]}>{children}</Text>
+      <Text fontWeight='500' style={[styles.text, textStyle]}>{children}</Text>
     </Pressable>
   )
 }
