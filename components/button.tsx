@@ -1,21 +1,29 @@
-import { ReactNode } from 'react';
-import { StyleSheet, Pressable } from 'react-native'
-import Text from './text';
+import { forwardRef, ReactNode } from "react";
+import { StyleSheet, Pressable } from "react-native";
+import Text from "./text";
 
 type ButtonProps = {
   onPress?: () => void;
   children: ReactNode;
   containerStyle?: object;
   textStyle?: object;
-}
+};
 
-const Button = ({ onPress, children, containerStyle, textStyle }: ButtonProps) => {
-  return (
-    <Pressable style={[styles.container, containerStyle]} onPress={onPress}>
-      <Text fontWeight='500' style={[styles.text, textStyle]}>{children}</Text>
-    </Pressable>
-  )
-}
+const Button = forwardRef(
+  ({ onPress, children, containerStyle, textStyle }: ButtonProps, ref) => {
+    return (
+      <Pressable
+        ref={ref as any}
+        style={[styles.container, containerStyle]}
+        onPress={onPress}
+      >
+        <Text fontWeight="500" style={[styles.text, textStyle]}>
+          {children}
+        </Text>
+      </Pressable>
+    );
+  }
+);
 
 const styles = StyleSheet.create({
   container: {
@@ -26,8 +34,8 @@ const styles = StyleSheet.create({
   },
   text: {
     color: "#EFF4FF",
-    textAlign: "center"
-  }
-})
+    textAlign: "center",
+  },
+});
 
-export default Button
+export default Button;

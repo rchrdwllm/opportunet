@@ -1,73 +1,58 @@
-
-import Header from '@/components/header';
-import Text from '@/components/text';
-import { Geist_500Medium } from '@expo-google-fonts/geist';
-import { Tabs } from 'expo-router';
-import { StyleSheet, View } from 'react-native';
+import Header from "@/components/header";
+import Text from "@/components/text";
+import { StyleSheet, View } from "react-native";
+import { MaterialTopTabs } from "@/components/top-tabs";
 
 export default function TabLayout() {
   return (
     <View style={styles.container}>
       <Header />
-      <Tabs screenOptions={{
-        headerShown: false,
-        tabBarPosition: "top",
+      <MaterialTopTabs screenOptions={{
         tabBarStyle: styles.tabBar,
-        tabBarLabelStyle: styles.tabBarLabel,
-        tabBarIconStyle: styles.tabBarIcon,
         tabBarLabel: ({ children, focused }) => (
           <View style={styles.tabBarLabelContainer}>
             <Text style={[styles.tabBarLabel, focused && styles.tabBarLabelFocused]}>{children}</Text>
-            {/* <View style={[styles.tabBarIndicator]} /> */}
           </View>
         ),
-        tabBarItemStyle: {
-          paddingTop: 0
-        }
+        tabBarActiveTintColor: "#181D27",
       }}>
-        <Tabs.Screen name='index' options={{
-          title: "By category"
-        }} />
-        <Tabs.Screen name='fyp' options={{
-          title: "For you"
-        }} />
-      </Tabs>
-    </View >
+        <MaterialTopTabs.Screen name="index" options={{ title: "By category" }} />
+        <MaterialTopTabs.Screen name="fyp" options={{ title: "For you" }} />
+      </MaterialTopTabs>
+    </View>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#FDFDFD"
+    backgroundColor: "#FDFDFD",
   },
-  tabBarLabelContainer: {
-  },
+  tabBarLabelContainer: {},
   tabBarLabel: {
     fontFamily: "Geist_500Medium",
     fontSize: 14,
-    opacity: 0.5
+    opacity: 0.5,
   },
   tabBarLabelFocused: {
     opacity: 1,
-
   },
   tabBarIcon: {
-    display: "none"
+    display: "none",
   },
   tabBar: {
     elevation: 0,
     boxShadow: "none",
     shadowOpacity: 0,
     backgroundColor: "#F9F9F9",
-    paddingTop: 16,
-    height: 64
+    borderBottomWidth: 1,
+    borderColor: "#E0E0E0"
   },
   tabBarIndicator: {
     position: "absolute",
     bottom: 0,
     height: 4,
     backgroundColor: "#181D27",
-    width: "100%"
+    width: "100%",
   },
-})
+});
