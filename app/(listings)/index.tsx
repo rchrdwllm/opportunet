@@ -1,6 +1,6 @@
 import JobCategoryCard from '@/components/job-category-card'
 import Text from '@/components/text'
-import { jobCategories } from '@/types'
+import { jobCategories } from '@/constants/job-categories'
 import { View, StyleSheet } from 'react-native'
 
 const HomeScreen = () => {

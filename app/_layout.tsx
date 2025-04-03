@@ -40,10 +40,11 @@ export default function RootLayout() {
       <Stack initialRouteName='(auth)' screenOptions={{ headerShown: false }} >
         <Stack.Screen name="(auth)" />
         <Stack.Screen name="(listings)" />
-        <Stack.Screen name="job-category" />
+        <Stack.Screen name="job-category/[slug]" />
         <Stack.Screen name="+not-found" />
+        <Stack.Screen name="job-listing/[slug]" />
       </Stack>
-      <StatusBar style="auto" />
+      <StatusBar style="dark" />
     </>
   );
 }

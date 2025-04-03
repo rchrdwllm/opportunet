@@ -1,10 +1,11 @@
 import { View, Text, StyleSheet } from 'react-native'
 import React from 'react'
+import SuggestedJobs from '@/components/suggested'
 
 const FYPScreen = () => {
   return (
     <View style={styles.container}>
-      <Text>FYPScreen</Text>
+      <SuggestedJobs />
     </View>
   )
 }

@@ -2,17 +2,18 @@ import { View, StyleSheet } from 'react-native'
 import Text from './text'
 import { JobCategory } from '@/types';
 import { Link } from 'expo-router';
+import { colors } from '@/constants/colors';
 
-const JobCategoryCard = ({ bgColor, borderColor, fgColor, iconBgColor, mutedColor, Icon, slug }: JobCategory) => {
+const JobCategoryCard = ({ color, Icon, slug }: JobCategory) => {
   return (
-    <Link href={`/job-category/${slug}`} style={[styles.container, { backgroundColor: bgColor, borderColor: borderColor }]}>
+    <Link href={`/job-category/${slug}`} style={[styles.container, { backgroundColor: colors[color].bgColor, borderColor: colors[color].borderColor }]}>
       <View style={styles.innerContainer}>
-        <View style={[styles.iconContainer, { backgroundColor: iconBgColor }]}>
-          <Icon size={24} color={fgColor} />
+        <View style={[styles.iconContainer, { backgroundColor: colors[color].iconBgColor }]}>
+          <Icon size={24} color={colors[color].fgColor} />
         </View>
         <View style={styles.textContainer}>
-          <Text style={[styles.title, { color: fgColor }]} fontWeight='500'>Remote & Freelance Jobs</Text>
-          <Text style={[styles.description, { color: mutedColor }]}>
+          <Text style={[styles.title, { color: colors[color].fgColor }]} fontWeight='500'>Remote & Freelance Jobs</Text>
+          <Text style={[styles.description, { color: colors[color].mutedColor }]}>
 
             Best for Persons with Disabilities, Senior Citizens, and Youth with limited mobility
           </Text>
@@ -52,7 +53,7 @@ const styles = StyleSheet.create({
     marginBottom: 8,
   },
   description: {
-    fontSize: 10,
+    fontSize: 12,
   },
 });
 

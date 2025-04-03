@@ -51,7 +51,6 @@ const styles = StyleSheet.create({
   textInput: {
     fontFamily: "Geist_400Regular",
     color: "#181D27",
-
   },
   textInputIcon: {
     paddingVertical: 10

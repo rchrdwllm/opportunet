@@ -1,4 +1,4 @@
-import { Laptop, LucideIcon } from "lucide-react-native";
+import { LucideIcon } from "lucide-react-native";
 
 export type JobCategory = {
   id: number;
@@ -6,24 +6,19 @@ export type JobCategory = {
   name: string;
   description: string;
   Icon: LucideIcon;
-  bgColor: string;
-  fgColor: string;
-  mutedColor: string;
-  borderColor: string;
-  iconBgColor: string;
+  color: any;
 }
 
-export const jobCategories: JobCategory[] = [
-  {
-    id: 1,
-    slug: "/remote-freelance-jobs",
-    name: "Remote & Freelance Jobs",
-    description: "Best for Persons with Disabilities, Senior Citizens, and Youth with limited mobility",
-    Icon: Laptop,
-    bgColor: "#FFF6ED",
-    fgColor: "#652501",
-    mutedColor: "#B28D77",
-    borderColor: "#F0E1D5",
-    iconBgColor: "#FFFDF8"
-  }
-]
+export type JobListing = {
+  id: number;
+  slug: string;
+  title: string;
+  poster: string;
+  posterImg: string;
+  location: string;
+  company: string;
+  date: Date;
+  isApplied: boolean;
+  caption: string;
+  color: string;
+}
