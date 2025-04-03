@@ -9,7 +9,7 @@ const Header = () => {
 
   return (
     <View style={styles.container}>
-      <Text variant="heading">OpportuNet</Text>
+      <Text variant="heading" fontWeight='700'>OpportuNet</Text>
       <Input Icon={Search} placeholder='Search' containerStyle={styles.input} value={query} onChangeText={setQuery} />
     </View>
   )

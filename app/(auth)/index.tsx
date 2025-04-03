@@ -19,7 +19,7 @@ export default function HomeScreen() {
         <Input value={password} onChangeText={setPassword} placeholder="Password" secureTextEntry />
       </View>
       <View style={styles.buttonContainer}>
-        <Link href="/(app)" asChild>
+        <Link href="/(listings)" asChild>
           <Button>Login</Button>
         </Link>
         <Link href="/register" asChild>
