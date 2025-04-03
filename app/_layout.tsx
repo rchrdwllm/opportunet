@@ -39,7 +39,8 @@ export default function RootLayout() {
     <>
       <Stack screenOptions={{ headerShown: false }} >
         <Stack.Screen name="(auth)" />
-        <Stack.Screen name="(app)" />
+        <Stack.Screen name="(listings)" />
+        <Stack.Screen name="job-category" />
         <Stack.Screen name="+not-found" />
       </Stack>
       <StatusBar style="auto" />

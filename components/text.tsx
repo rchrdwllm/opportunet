@@ -25,7 +25,7 @@ const Text = ({ children, style, fontWeight = "400", variant = "body" }: TextPro
   }, [fontWeight]);
 
   return (
-    <RNText style={[styles.text, fontWeightStyle, styles[variant], style]}>{children}</RNText>
+    <RNText style={[styles.text, styles[variant], style, fontWeightStyle]}>{children}</RNText>
   )
 }
 
