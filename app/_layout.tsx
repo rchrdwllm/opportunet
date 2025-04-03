@@ -42,7 +42,7 @@ export default function RootLayout() {
         <Stack.Screen name="(listings)" />
         <Stack.Screen name="job-category/[slug]" />
         <Stack.Screen name="+not-found" />
-        <Stack.Screen name="job-listing/[slug]" />
+        <Stack.Screen name="job-listing/[id]" />
       </Stack>
       <StatusBar style="dark" />
     </>

@@ -11,7 +11,7 @@ export default function TabLayout() {
         tabBarStyle: styles.tabBar,
         tabBarLabel: ({ children, focused }) => (
           <View style={styles.tabBarLabelContainer}>
-            <Text style={[styles.tabBarLabel, focused && styles.tabBarLabelFocused]}>{children}</Text>
+            <Text fontWeight="500" style={[styles.tabBarLabel, focused && styles.tabBarLabelFocused]}>{children}</Text>
           </View>
         ),
         tabBarIndicatorStyle: styles.tabBarIndicator,

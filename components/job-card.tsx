@@ -6,9 +6,9 @@ import { colors } from '@/constants/colors'
 import { Link } from 'expo-router'
 import { Hand } from 'lucide-react-native'
 
-const JobCard = ({ color, slug, title, posterImg, poster, location, isApplied, caption, company, date }: JobListing) => {
+const JobCard = ({ color, id, title, posterImg, poster, location, isApplied, caption, company, date }: JobListing) => {
   return (
-    <Link href={`/job-listing/${slug}`} style={{ width: '100%', display: "flex" }}>
+    <Link href={`/job-listing/${id}`} style={{ width: '100%', display: "flex" }}>
       <View style={[styles.container, { backgroundColor: colors[color].bgColor, borderColor: colors[color].borderColor }]}>
         <View style={styles.header}>
           <Image

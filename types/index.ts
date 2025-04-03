@@ -10,8 +10,7 @@ export type JobCategory = {
 }
 
 export type JobListing = {
-  id: number;
-  slug: string;
+  id: string;
   title: string;
   poster: string;
   posterImg: string;
