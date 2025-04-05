@@ -1,8 +1,18 @@
 import { LucideIcon } from "lucide-react-native";
 
+export enum JobCategoryEnum {
+  REMOTE_FREELANCE = 'remote-freelance',
+  PART_TIME_ENTRY_LEVEL = 'part-time-entry-level',
+  SKILLED_LABOR_TRADE = 'skilled-labor-trade',
+  DISABILITY_INCLUSIVE = 'disability-inclusive',
+  GOVERNMENT_NONPROFIT = 'government-nonprofit',
+  INTERNSHIPS_APPRENTICESHIPS = 'internships-apprenticeships',
+  SENIOR_FRIENDLY = 'senior-friendly',
+}
+
 export type JobCategory = {
-  id: number;
-  slug: string;
+  id: string;
+  category: JobCategoryEnum;
   name: string;
   description: string;
   Icon: LucideIcon;
@@ -12,12 +22,19 @@ export type JobCategory = {
 export type JobListing = {
   id: string;
   title: string;
-  poster: string;
-  posterImg: string;
-  location: string;
   company: string;
-  date: Date;
+  location: string;
+  datePosted: Date;
+  description: string;
+  category: JobCategoryEnum;
+  minSalary: number;
+  maxSalary: number;
+  employmentType: string;
+  remote: boolean;
+  responsibilities: string[];
+  isSaved: boolean;
   isApplied: boolean;
-  caption: string;
-  color: string;
+  isFeatured: boolean;
+  postedBy: string;
+  image: string;
 }

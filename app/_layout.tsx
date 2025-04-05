@@ -40,7 +40,7 @@ export default function RootLayout() {
       <Stack initialRouteName='(auth)' screenOptions={{ headerShown: false }} >
         <Stack.Screen name="(auth)" />
         <Stack.Screen name="(listings)" />
-        <Stack.Screen name="job-category/[slug]" />
+        <Stack.Screen name="job-category/[id]" />
         <Stack.Screen name="+not-found" />
         <Stack.Screen name="job-listing/[id]" />
       </Stack>

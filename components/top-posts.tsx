@@ -1,16 +1,18 @@
 import { View, StyleSheet } from 'react-native'
 import Text from './text'
-import { suggestedJobs } from '@/constants/suggested-jobs'
 import JobCard from './job-card'
+import jobListings from '@/constants/job-listings'
 
-const TopPicks = () => {
+const TopPosts = () => {
   return (
     <View style={styles.container}>
-      <Text fontWeight='500'>Top picks</Text>
+      <Text fontWeight='500'>Top posts</Text>
       <View style={styles.jobList}>
-        {suggestedJobs.map((job) => (
-          <JobCard key={job.id} {...job} />
-        ))}
+        {jobListings.map(job => {
+          if (job.isFeatured) return (
+            <JobCard key={job.id} {...job} />
+          )
+        })}
       </View>
     </View>
   )
@@ -27,4 +29,4 @@ const styles = StyleSheet.create({
   }
 })
 
-export default TopPicks
+export default TopPosts
