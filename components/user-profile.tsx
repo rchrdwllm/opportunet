@@ -7,7 +7,9 @@ const UserProfile = () => {
       {/* User Info Section */}
       <View style={styles.userInfoSection}>
         <Image
-          source={{ uri: "https://via.placeholder.com/100" }}
+          source={{
+            uri: "https://scontent.fmnl17-2.fna.fbcdn.net/v/t39.30808-6/481469665_4002787499999105_7088976398120491407_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=a5f93a&_nc_eui2=AeHhxJUcBLYWZWPZvkLm32zeqReKteimfrOpF4q16KZ-s3oAmsLe843MmmdLL7W6UgburhJTDOZE5dcjz7li-Yri&_nc_ohc=SPSEsN9RepUQ7kNvwFW2wTZ&_nc_oc=Adnv22R2SVxhuwf2YlNYHXPgZF3X9hhcOhg2drd6YeF5gkRiMytp3NlzjiF4HGsxIO0&_nc_zt=23&_nc_ht=scontent.fmnl17-2.fna&_nc_gid=rC8QA6oa03khFIRZRuCG4w&oh=00_AYE89ZO8N7SvGplM7rgVq6c1CWgDDCaOd_Rq3ZPGbzB2Sg&oe=67F7411F",
+          }}
           style={styles.profileImage}
         />
         <Text style={styles.userName}>John Doe</Text>
