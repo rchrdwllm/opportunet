@@ -1,9 +1,42 @@
+import { FontAwesome } from "@expo/vector-icons";
+import { useRouter } from "expo-router";
 import React from "react";
-import { Image, SafeAreaView, StyleSheet, Text, View } from "react-native";
+import { Image, Pressable, SafeAreaView, StyleSheet, View } from "react-native";
+import Text from "./text";
 
 const UserProfile = () => {
+  const router = useRouter();
+
+  const handleBackPress = () => {
+    router.back();
+  };
+
+  const handleLogoutPress = () => {
+    router.push("/(auth)");
+  };
+
   return (
     <SafeAreaView style={styles.container}>
+      {/* Header Section */}
+      <View style={styles.headerSection}>
+        <Pressable onPress={handleBackPress}>
+          <FontAwesome
+            name="arrow-left"
+            size={24}
+            color="#181D27"
+            style={{ opacity: 0.5 }}
+          />
+        </Pressable>
+        <Text fontWeight="700" variant="heading" style={styles.headerTitle}>
+          Profile
+        </Text>
+        <Pressable onPress={handleLogoutPress}>
+          <Text fontWeight="500" style={styles.logoutButton}>
+            Logout
+          </Text>
+        </Pressable>
+      </View>
+
       {/* User Info Section */}
       <View style={styles.userInfoSection}>
         <Image
@@ -12,7 +45,7 @@ const UserProfile = () => {
           }}
           style={styles.profileImage}
         />
-        <Text style={styles.userName}>John Doe</Text>
+        <Text style={styles.userName}>Richard Angus</Text>
         <Text style={styles.userTitle}>Software Engineer</Text>
       </View>
 
@@ -56,19 +89,32 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: "#FDFDFD",
     padding: 20,
+    paddingTop: 40,
+  },
+  headerSection: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "center",
+    marginBottom: 20,
+  },
+  headerTitle: {
+    color: "#181D27",
+  },
+  logoutButton: {
+    color: "#DB2777",
   },
   userInfoSection: {
     alignItems: "center",
     marginBottom: 20,
   },
   profileImage: {
-    width: 100,
-    height: 100,
-    borderRadius: 50,
+    width: 150,
+    height: 150,
+    borderRadius: 100,
     marginBottom: 10,
   },
   userName: {
-    fontSize: 24,
+    fontSize: 40,
     fontWeight: "bold",
     color: "#181D27",
   },
