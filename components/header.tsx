@@ -1,6 +1,6 @@
 import Text from "@/components/text";
 import { useRouter } from "expo-router";
-import { Search } from "lucide-react-native";
+import { CircleUserRound, Search } from "lucide-react-native";
 import { useState } from "react";
 import { Image, Pressable, StyleSheet, View } from "react-native";
 import Input from "./input";
@@ -16,12 +16,7 @@ const Header = () => {
           OpportuNet
         </Text>
         <Pressable onPress={() => router.push("/profile")}>
-          <Image
-            source={{
-              uri: "https://img.icons8.com/?size=100&id=15265&format=png&color=000000",
-            }}
-            style={styles.profileIcon}
-          />
+          <CircleUserRound size={28} color={"#181D27"} />
         </Pressable>
       </View>
       <Input
@@ -46,11 +41,6 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "space-between",
     alignItems: "center",
-  },
-  profileIcon: {
-    width: 30,
-    height: 30,
-    borderRadius: 20,
   },
   input: {
     backgroundColor: "#FDFDFD",

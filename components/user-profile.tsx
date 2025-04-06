@@ -66,19 +66,19 @@ const UserProfile = () => {
         <View style={styles.statsRow}>
           <View style={styles.statItem}>
             <Text style={styles.statLabel}>Jobs applied</Text>
-            <Text variant="heading" fontWeight="500" style={styles.statValue}>
+            <Text variant="heading" isMono fontWeight="500" style={styles.statValue}>
               52
             </Text>
           </View>
           <View style={styles.statItem}>
             <Text style={styles.statLabel}>Received</Text>
-            <Text variant="heading" fontWeight="500" style={styles.statValue}>
+            <Text variant="heading" isMono fontWeight="500" style={styles.statValue}>
               20
             </Text>
           </View>
           <View style={styles.statItem}>
             <Text style={styles.statLabel}>Contacted</Text>
-            <Text variant="heading" fontWeight="500" style={styles.statValue}>
+            <Text variant="heading" isMono fontWeight="500" style={styles.statValue}>
               8
             </Text>
           </View>

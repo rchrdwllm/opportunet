@@ -6,6 +6,7 @@ type TextProps = {
   style?: object;
   fontWeight?: "400" | "500" | "600" | "700";
   variant?: "heading" | "subheading" | "body";
+  isMono?: boolean;
 };
 
 const Text = ({
@@ -13,6 +14,7 @@ const Text = ({
   style,
   fontWeight = "400",
   variant = "body",
+  isMono = false,
 }: TextProps) => {
   const fontWeightStyle = useMemo(() => {
     switch (fontWeight) {
@@ -30,7 +32,7 @@ const Text = ({
   }, [fontWeight]);
 
   return (
-    <RNText style={[styles.text, styles[variant], style, fontWeightStyle]}>
+    <RNText style={[styles.text, styles[variant], style, fontWeightStyle, isMono && { fontFamily: "GeistMono_700Bold" }]}>
       {children}
     </RNText>
   );

@@ -25,7 +25,7 @@ const VerifyEmailScreen = () => {
         <Input containerStyle={styles.containerStyle} inputStyle={styles.inputText} value={digit5} onChangeText={setDigit5} placeholder='0' />
         <Input containerStyle={styles.containerStyle} inputStyle={styles.inputText} value={digit6} onChangeText={setDigit6} placeholder='0' />
       </View>
-      <Link href="/(app)" asChild>
+      <Link href="/(listings)" asChild>
         <Button containerStyle={styles.button}>Submit</Button>
       </Link>
     </View>

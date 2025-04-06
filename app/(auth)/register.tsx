@@ -16,7 +16,7 @@ export default function RegisterScreen() {
   return (
     <View style={styles.container}>
       <View style={styles.inputContainer}>
-        <Text style={styles.text} variant='heading'>Create an account</Text>
+        <Text style={styles.text} fontWeight='600' variant='heading'>Create an account</Text>
         <Input value={firstName} onChangeText={setFirstName} placeholder="First Name" />
         <Input value={lastName} onChangeText={setLastName} placeholder="Last Name" />
         <Input value={email} onChangeText={setEmail} placeholder="Email" />

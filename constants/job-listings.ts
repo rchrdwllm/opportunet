@@ -15,9 +15,9 @@ const portraitPhotos = [
   "https://images.unsplash.com/photo-1524504388940-b1c1722653e1",
   "https://images.unsplash.com/photo-1534528741775-53994a69daeb",
   "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde",
-  "https://images.unsplash.com/photo-1545996124-0501ebae79a3",
   "https://images.unsplash.com/photo-1548142813-c348350df52b",
-  "https://images.unsplash.com/photo-1548222349-1cfa549ea18d"
+  "https://images.unsplash.com/photo-1474176857210-7287d38d27c6",
+  "https://images.unsplash.com/photo-1500648767791-00dcc994a43e",
 ];
 
 function getRandomPortraitPhoto() {
