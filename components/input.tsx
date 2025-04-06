@@ -1,5 +1,5 @@
 import { LucideIcon } from "lucide-react-native";
-import { View, TextInput, StyleSheet } from "react-native";
+import { StyleSheet, TextInput, View } from "react-native";
 
 type InputProps = {
   placeholder: string;
@@ -18,7 +18,7 @@ const Input = ({
   secureTextEntry,
   containerStyle,
   inputStyle,
-  Icon
+  Icon,
 }: InputProps) => {
   return (
     <View style={[styles.container, containerStyle]}>
@@ -28,7 +28,7 @@ const Input = ({
         onChangeText={onChangeText}
         secureTextEntry={secureTextEntry}
         placeholder={placeholder}
-        style={[styles.textInput, Icon && (styles.textInputIcon), inputStyle]}
+        style={[styles.textInput, Icon && styles.textInputIcon, inputStyle]}
         placeholderTextColor="#A4A7AE"
       />
     </View>
@@ -46,15 +46,15 @@ const styles = StyleSheet.create({
     borderColor: "#181D2710",
     flexDirection: "row",
     alignItems: "center",
-    gap: 6
+    gap: 6,
   },
   textInput: {
     fontFamily: "Geist_400Regular",
     color: "#181D27",
   },
   textInputIcon: {
-    paddingVertical: 10
-  }
-})
+    paddingVertical: 10,
+  },
+});
 
 export default Input;

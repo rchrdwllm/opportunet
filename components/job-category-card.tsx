@@ -1,26 +1,53 @@
-import { View, StyleSheet } from 'react-native'
-import Text from './text'
-import { JobCategory } from '@/types';
-import { Link } from 'expo-router';
-import { colors } from '@/constants/colors';
+import { colors } from "@/constants/colors";
+import { JobCategory } from "@/types";
+import { Link } from "expo-router";
+import { StyleSheet, View } from "react-native";
+import Text from "./text";
 
-const JobCategoryCard = ({ id, color, Icon, name, description }: JobCategory) => {
+const JobCategoryCard = ({
+  id,
+  color,
+  Icon,
+  name,
+  description,
+}: JobCategory) => {
   return (
-    <Link href={`/job-category/${id}`} style={[styles.container, { backgroundColor: colors[color].bgColor, borderColor: colors[color].borderColor }]}>
+    <Link
+      href={`/job-category/${id}`}
+      style={[
+        styles.container,
+        {
+          backgroundColor: colors[color].bgColor,
+          borderColor: colors[color].borderColor,
+        },
+      ]}
+    >
       <View style={styles.innerContainer}>
-        <View style={[styles.iconContainer, { backgroundColor: colors[color].iconBgColor }]}>
+        <View
+          style={[
+            styles.iconContainer,
+            { backgroundColor: colors[color].iconBgColor },
+          ]}
+        >
           <Icon size={24} color={colors[color].fgColor} />
         </View>
         <View style={styles.textContainer}>
-          <Text style={[styles.title, { color: colors[color].fgColor }]} fontWeight='500'>{name}</Text>
-          <Text style={[styles.description, { color: colors[color].mutedColor }]}>
-
-            {description}          </Text>
+          <Text
+            style={[styles.title, { color: colors[color].fgColor }]}
+            fontWeight="500"
+          >
+            {name}
+          </Text>
+          <Text
+            style={[styles.description, { color: colors[color].mutedColor }]}
+          >
+            {description}{" "}
+          </Text>
         </View>
       </View>
     </Link>
-  )
-}
+  );
+};
 
 const styles = StyleSheet.create({
   container: {
@@ -30,16 +57,16 @@ const styles = StyleSheet.create({
     borderWidth: 1,
   },
   innerContainer: {
-    flexDirection: 'row',
-    alignItems: 'center',
+    flexDirection: "row",
+    alignItems: "center",
   },
   iconContainer: {
     marginRight: 16,
     borderRadius: 100,
     height: 50,
     width: 50,
-    justifyContent: 'center',
-    alignItems: 'center',
+    justifyContent: "center",
+    alignItems: "center",
   },
   icon: {
     fontSize: 24,
@@ -56,4 +83,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default JobCategoryCard
+export default JobCategoryCard;

@@ -147,7 +147,13 @@ const styles = StyleSheet.create({
     color: "#8B8D92",
   },
   contentSection: {
-    marginBottom: 20,
+    backgroundColor: "#F9F9F9",
+    marginBottom: 16,
+    display: "flex",
+    padding: 16,
+    borderRadius: 24,
+    borderWidth: 1,
+    borderColor: "rgba(0, 0, 0, .1)",
   },
   sectionTitle: {
     fontSize: 18,

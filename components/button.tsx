@@ -1,5 +1,5 @@
 import { forwardRef, ReactNode } from "react";
-import { StyleSheet, Pressable } from "react-native";
+import { Pressable, StyleSheet } from "react-native";
 import Text from "./text";
 
 type ButtonProps = {
