@@ -1,4 +1,3 @@
-import { FontAwesome } from "@expo/vector-icons";
 import { useRouter } from "expo-router";
 import React from "react";
 import {
@@ -26,11 +25,11 @@ const UserProfile = () => {
     <SafeAreaView style={styles.container}>
       <View style={styles.headerSection}>
         <Pressable onPress={handleBackPress}>
-          <FontAwesome
-            name="arrow-left"
-            size={24}
-            color="#181D27"
-            style={{ opacity: 0.5 }}
+          <Image
+            source={{
+              uri: "https://img.icons8.com/?size=100&id=85556&format=png&color=000000",
+            }}
+            style={styles.logoutButton}
           />
         </Pressable>
         <Text variant="subheading" fontWeight="700" style={styles.headerTitle}>
@@ -39,7 +38,7 @@ const UserProfile = () => {
         <Pressable onPress={handleLogoutPress}>
           <Image
             source={{
-              uri: "https://img.icons8.com/?size=100&id=15265&format=png&color=000000",
+              uri: "https://img.icons8.com/?size=100&id=61022&format=png&color=000000",
             }}
             style={styles.logoutButton}
           />
@@ -137,14 +136,15 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "space-between",
     alignItems: "center",
-    marginBottom: 20,
+    paddingVertical: 24,
   },
   headerTitle: {
     color: "#181D27",
+    fontSize: 16,
   },
   userInfoSection: {
     alignItems: "center",
-    marginBottom: 20,
+    marginVertical: 20,
   },
   profileImage: {
     width: 150,
@@ -197,8 +197,8 @@ const styles = StyleSheet.create({
     color: "rgba(24, 29, 39, .5)",
   },
   logoutButton: {
-    width: 40,
-    height: 40,
+    width: 24,
+    height: 24,
     borderRadius: 20,
   },
 });
