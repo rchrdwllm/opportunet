@@ -48,8 +48,8 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   profileIcon: {
-    width: 40,
-    height: 40,
+    width: 30,
+    height: 30,
     borderRadius: 20,
   },
   input: {
