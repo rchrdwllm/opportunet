@@ -27,13 +27,16 @@ const UserProfile = () => {
             style={{ opacity: 0.5 }}
           />
         </Pressable>
-        <Text fontWeight="700" variant="heading" style={styles.headerTitle}>
+        <Text variant="subheading" fontWeight="700" style={styles.headerTitle}>
           Profile
         </Text>
         <Pressable onPress={handleLogoutPress}>
-          <Text fontWeight="500" style={styles.logoutButton}>
-            Logout
-          </Text>
+          <Image
+            source={{
+              uri: "https://img.icons8.com/?size=100&id=15265&format=png&color=000000",
+            }}
+            style={styles.logoutButton}
+          />
         </Pressable>
       </View>
 
@@ -45,23 +48,31 @@ const UserProfile = () => {
           }}
           style={styles.profileImage}
         />
-        <Text style={styles.userName}>Richard Angus</Text>
+        <Text variant="heading" fontWeight="700">
+          Richard Angus
+        </Text>
         <Text style={styles.userTitle}>Software Engineer</Text>
       </View>
 
       {/* Stats Row */}
       <View style={styles.statsRow}>
         <View style={styles.statItem}>
-          <Text style={styles.statValue}>120</Text>
-          <Text style={styles.statLabel}>Posts</Text>
+          <Text style={styles.statLabel}>Jobs applied</Text>
+          <Text variant="heading" fontWeight="500" style={styles.statValue}>
+            52
+          </Text>
         </View>
         <View style={styles.statItem}>
-          <Text style={styles.statValue}>300</Text>
-          <Text style={styles.statLabel}>Followers</Text>
+          <Text style={styles.statLabel}>Received</Text>
+          <Text variant="heading" fontWeight="500" style={styles.statValue}>
+            20
+          </Text>
         </View>
         <View style={styles.statItem}>
-          <Text style={styles.statValue}>180</Text>
-          <Text style={styles.statLabel}>Following</Text>
+          <Text style={styles.statLabel}>Contacted</Text>
+          <Text variant="heading" fontWeight="500" style={styles.statValue}>
+            8
+          </Text>
         </View>
       </View>
 
@@ -100,9 +111,6 @@ const styles = StyleSheet.create({
   headerTitle: {
     color: "#181D27",
   },
-  logoutButton: {
-    color: "#DB2777",
-  },
   userInfoSection: {
     alignItems: "center",
     marginBottom: 20,
@@ -131,8 +139,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   statValue: {
-    fontSize: 18,
-    fontWeight: "bold",
+    fontSize: 48,
     color: "#181D27",
   },
   statLabel: {
@@ -151,6 +158,11 @@ const styles = StyleSheet.create({
   sectionContent: {
     fontSize: 14,
     color: "#181D27",
+  },
+  logoutButton: {
+    width: 40,
+    height: 40,
+    borderRadius: 20,
   },
 });
 
