@@ -57,7 +57,7 @@ const UserProfile = () => {
             style={styles.profileImage}
           />
           <Text variant="heading" fontWeight="700" style={styles.userName}>
-            Richard Angus
+            Kai Zachary Sotto
           </Text>
           <Text style={styles.userTitle}>Software Engineer</Text>
         </View>
