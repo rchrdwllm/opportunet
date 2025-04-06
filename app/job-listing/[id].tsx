@@ -54,7 +54,7 @@ const JobListingScreen = () => {
       <View style={styles.card}>
         <Text style={styles.cardTitle} fontWeight="500">Responsibilities</Text>
         {job.responsibilities.map((responsibility, index) => (
-          <View style={styles.responsibility}>
+          <View key={responsibility + index.toString()} style={styles.responsibility}>
             <View style={styles.responsibilityNumberContainer}>
               <Text style={styles.responsibilityNumber} isMono>{index + 1}</Text>
             </View>
